@@ -1,0 +1,36 @@
+version: 2
+
+updates:
+  # Example for npm (Node.js)
+  - package-ecosystem: "npm"
+    directory: "/" # Location of package.json
+    schedule:
+      interval: "weekly" # Options: daily, weekly, monthly
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "deps"
+    reviewers:
+      - "your-github-username"
+    assignees:
+      - "your-github-username"
+    labels:
+      - "dependencies"
+    versioning-strategy: increase
+
+  # Example for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+
+  # Example for Docker
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "daily"
+
+  # Example for Python (pip)
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "daily"
