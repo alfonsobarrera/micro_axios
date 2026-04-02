@@ -1,0 +1,24 @@
+{
+  "name": "micro-axios-api",
+  "version": "1.0.0",
+  "description": "A basic API to exemplify the use of axios npm library",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "axios",
+    "api",
+    "express"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.14.1",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
