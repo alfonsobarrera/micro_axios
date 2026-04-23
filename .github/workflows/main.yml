@@ -1,0 +1,28 @@
+name: Learn GitHub Actions Python
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  python-demo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Show Python version
+        run: python --version
+
+      - name: Run sample script
+        run: |
+          echo "print('Learning GitHub Actions with Python')" > app.py
+          python app.py
